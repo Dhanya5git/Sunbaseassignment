@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+<table>
+<div class="container mt-5" align="center">
+<div style="border-style:solid;width:500px; padding: 20px;">
+<form role="form" th:action="@{/login}" th:object="${user}" method="post">
+<h1>Login</h1>
+        <br />
+
+
+ <div class="col-sm-4">
+            <label for="Username">Username
+    <input type="text" th:value="root" th:field="*{userName}" placeholder="root"/></label></div>
+     <div class="col-sm-4">
+            <label for="Password">Password</label>
+    <input type="password"th:value="root" th:field="*{password}" placeholder="root"/></div>
+    <a  th:href="@{/customers/}" type="submit">Login</a>
+</form>
+</div>
+</div>
+</table>
+</body>
+</html>
